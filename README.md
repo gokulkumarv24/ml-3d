@@ -54,10 +54,9 @@ mesh_assignment/
 1. **Clone or download the project:**
 
    ```bash
-   git clone <repository-url>
+   git clone [https://github.com/gokulkumarv24/ml-3d](https://github.com/gokulkumarv24/ml-3d)
    cd mesh_assignment
    ```
-
 2. **Install required packages:**
 
    ```bash
@@ -69,8 +68,8 @@ mesh_assignment/
    ```bash
    pip install -r requirements.txt
    ```
-
 3. **Verify installation:**
+
    ```bash
    python -c "import numpy, matplotlib, trimesh, pandas, sklearn; print('All packages installed successfully!')"
    ```
@@ -139,22 +138,20 @@ mesh_files = ['data/your_mesh.obj']
    ```bash
    pip install --upgrade trimesh
    ```
-
 2. **matplotlib display issues:**
 
    ```bash
    # For headless systems
    export MPLBACKEND=Agg
    ```
-
 3. **Permission errors on Windows:**
 
    ```bash
    # Run as administrator or use
    pip install --user numpy matplotlib trimesh pandas scikit-learn
    ```
-
 4. **Jupyter notebook not starting:**
+
    ```bash
    pip install jupyter
    jupyter notebook --generate-config
@@ -198,7 +195,6 @@ Axis     Min    Max   Mean    Std  Range
    - Formula: `x' = (x - x_min) / (x_max - x_min)`
    - Brings coordinates to [0, 1] range
    - Preserves original aspect ratios
-
 2. **Unit Sphere Normalization**
 
    - Centers mesh at origin: `centered = vertices - centroid`
@@ -251,13 +247,11 @@ Axis     Min    Max   Mean    Std  Range
    - Average MSE: 0.00000279
    - Consistently outperformed Unit Sphere normalization
    - Perfect reconstruction for simple geometries (cube)
-
 2. **Quantization Effectiveness**
 
    - 1024 bins provide excellent quality preservation (<1% relative error)
    - Systematic errors depend on normalization method choice
    - Complex geometries show higher reconstruction errors
-
 3. **Method Comparison**
 
    - **Min-Max**: Better for preserving original aspect ratios
@@ -287,7 +281,6 @@ Axis     Min    Max   Mean    Std  Range
    - 3D scatter plots of all three sample meshes
    - Color-coded by Z-coordinate values
    - Equal axis scaling for proper proportions
-
 2. **Error Analysis** (`visualizations/error_analysis.png`)
 
    - MSE and MAE comparisons between methods
